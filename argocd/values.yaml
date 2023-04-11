@@ -1,0 +1,24 @@
+namespace: aline
+
+replicas: 2
+
+secrets:
+  JWT_SECRET_KEY: dPYRdGOEoOCOu700D0oFmYE6ek8hvXmQUM0gFkehJtAfm1I1lYYxGMbTr0mzzAWt
+  ENCRYPT_SECRET_KEY: eEBYZtMG1s5oZKmAduUn1iWp8MAeYO0n19qw4WojvM1qv0p27fYbuSg1UViwdeCi
+
+microservices:
+  - name: user-microservice
+    port: 8070
+    image:
+      repository: krushilnaik/aline-user-microservice
+      tag: latest
+  - name: underwriter-microservice
+    port: 8071
+    image:
+      repository: krushilnaik/aline-underwriter-microservice
+      tag: latest
+  - name: account-microservice
+    port: 8072
+    image:
+      repository: krushilnaik/aline-account-microservice
+      tag: latest
