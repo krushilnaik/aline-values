@@ -22,8 +22,3 @@ microservices:
     image:
       repository: krushilnaik/aline-account-microservice
       tag: latest
-  - name: transaction-microservice
-    port: 8073
-    image:
-      repository: krushilnaik/aline-transaction-microservice
-      tag: latest
